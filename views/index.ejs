@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex">
+            <% for(const i of memes){ %>
+                <img class="meme_image" id=<%= i.id %> src=<%= i.url %>>
+            <% } %>
+        </div>
+        <form action="/generate" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="input-container">
+                <label for="">ID</label>
+                <input id="template_id" required name="template_id" type="text">
+            </div>
+            <div class="input-container">
+                <label for="">Username</label>
+                <input required name="username" type="text">
+            </div>
+            <div class="input-container">
+                <label for="">Password</label>
+                <input required name="password" type="password">
+            </div>
+            <div class="input-container">
+                <label for="">Upper text</label>
+                <input required name="text0" type="text">
+            </div>
+            <div class="input-container">
+                <label for="">Lower Text</label>
+                <input required name="text1" type="text">
+            </div>
+            <button type="submit" class="btn-primary">
+                Send
+            </button>
+        </form>
+    </div>
+</body>
+
+<script>
+    var images = document.getElementsByClassName("meme_image");
+    var templateInput = document.getElementById("template_id");
+    for(const i of images){
+        i.addEventListener('click', (e) => {
+            templateInput.value = i.id;
+        });
+    }
+</script>
+</html>

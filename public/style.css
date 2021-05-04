@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.input-container label{
+    font-size: 24px;
+    font-family: 'Consolas', sans-serif;
+    font-weight: bold;
+}
+
+.input-container input{
+    border-radius: 25px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.btn-primary{
+    width: 30%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 15px;
+    background-color: rgb(4, 156, 194);
+    color: white;
+    cursor: pointer;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-flex img{
+    width: auto;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
